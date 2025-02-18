@@ -11,7 +11,7 @@ Os LEDs ajustam seu brilho conforme a posição do **joystick** e o **botão do 
 
 - **Nome:** Jaime Neto  
 - **Grupo:** 0  
-- **Matrícula:** TIC370100555  
+- **Matrícula:** TIC370100555 
 
 ---
 
