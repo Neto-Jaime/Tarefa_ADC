@@ -1,0 +1,4 @@
+[wokwi]
+version = 1
+firmware = 'build/ADC_TarefaU4.uf2'
+elf = 'build/ADC_TarefaU4.elf'
