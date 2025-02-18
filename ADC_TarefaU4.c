@@ -42,8 +42,8 @@ static volatile uint32_t tempo_ultimo_press_jstk = 0;
 
 // Flags de controle
 static volatile bool estado_led = true;  // Indica se o LED está ligado ou desligado
-static volatile uint8_t contador_bordas = 0; // Contador para alternar bordas no display
-static volatile bool borda_externa = false, borda_media = false; // Controle de bordas do display
+static volatile uint8_t contador_bordas = 0; // Alternar bordas no display
+static volatile bool borda_externa = false, borda_media = false; // Bordas do display
 
 // Configuração dos LEDs (um digital e dois PWM)
 void configurar_leds() {
@@ -125,7 +125,7 @@ void tratar_interrupcao_botao(uint gpio, uint32_t eventos) {
         tempo_ultimo_press_a = tempo_atual;
         estado_led = !estado_led;
     }
-    // Alterna as bordas do display e o LED verde quando o botão do joystick for pressionado
+    // Alterna as bordas do display e o LED verde quando aperta o joystick 
     if ((gpio == BOTAO_JOYSTICK) && (tempo_atual - tempo_ultimo_press_jstk > 200)) {
         tempo_ultimo_press_jstk = tempo_atual;
         gpio_put(LED_VERDE, !gpio_get(LED_VERDE)); // Inverte o estado do LED Verde
