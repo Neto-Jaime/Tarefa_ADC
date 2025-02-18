@@ -158,7 +158,7 @@ int main() {
     gpio_set_irq_enabled_with_callback(BOTAO_A, GPIO_IRQ_EDGE_FALL, true, &tratar_interrupcao_botao);
     gpio_set_irq_enabled_with_callback(BOTAO_JOYSTICK, GPIO_IRQ_EDGE_FALL, true, &tratar_interrupcao_botao);
 
-    while (1) {
+    while (true) {
         sleep_ms(20);
 
         eixo_x = ler_eixo_x();
